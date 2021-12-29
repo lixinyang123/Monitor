@@ -19,9 +19,9 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
@@ -292,5 +292,57 @@
                       Background="DarkGray"
                       ShowsPreview="True"
                       Margin="0,0,0,20"/>
+
+        <ScrollViewer Grid.Column="4" Padding="15,15,25,15">
+            <ui:SimpleStackPanel Spacing="24">
+
+                <!--Data-->
+
+                <TextBlock Text="Data" FontSize="30" Style="{StaticResource HeaderTextBlockStyle}" />
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel>
+                        <TextBlock Text="Fall Detection Demo" FontSize="13" Style="{StaticResource HeaderTextBlockStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" Orientation="Horizontal">
+                        <TextBlock Text="Number of Detection People: " FontSize="13" Style="{StaticResource HeaderTextBlockStyle}" />
+                        <TextBlock Text="123" FontSize="13" Style="{StaticResource HeaderTextBlockStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="4" Orientation="Horizontal">
+                        <TextBlock Text="Fall Detection: " FontSize="13" Style="{StaticResource HeaderTextBlockStyle}" />
+                        <TextBlock Text="Enable" FontSize="13" Style="{StaticResource HeaderTextBlockStyle}" />
+                    </StackPanel>
+
+                    <TextBlock Grid.Column="3" Text="Standing" FontSize="13" Style="{StaticResource HeaderTextBlockStyle}" />
+                    <Rectangle Grid.Row="1" Grid.Column="3" Grid.RowSpan="5" HorizontalAlignment="Left" Margin="0, 5" Fill="GreenYellow" Width="50" Height="50" />
+
+                </Grid>
+
+                <!--Height Plots-->
+                
+                <TextBlock Text="Height Plots" FontSize="30" Style="{StaticResource HeaderTextBlockStyle}" />
+
+                <Grid>
+                    
+                </Grid>
+
+            </ui:SimpleStackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
