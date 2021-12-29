@@ -6,16 +6,10 @@
         xmlns:ui="http://schemas.modernwpf.com/2019"
         ui:WindowHelper.UseModernWindowStyle="True"
         ui:ThemeManager.RequestedTheme="Light"
-        xmlns:local="clr-namespace:Monitor"
+        xmlns:chart="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="750" Width="1300">
-
-    <Window.Resources>
-        <Style x:Key="TextStyle" TargetType="{x:Type TextBlock}">
-            <Setter Property="FontSize" Value="13" />
-        </Style>
-    </Window.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -338,9 +332,20 @@
                 
                 <TextBlock Text="Height Plots" FontSize="30" Style="{StaticResource HeaderTextBlockStyle}" />
 
-                <Grid>
-                    
-                </Grid>
+                <StackPanel>
+                    <TextBlock Text="Instantaneous Height" HorizontalAlignment="Center" FontSize="13" Style="{StaticResource HeaderTextBlockStyle}" />
+                    <chart:CartesianChart Name="chart1" Height="200" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Average Height" HorizontalAlignment="Center" FontSize="13" Style="{StaticResource HeaderTextBlockStyle}" />
+                    <chart:CartesianChart Name="chart2" Height="200" />
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Delta Height" HorizontalAlignment="Center" FontSize="13" Style="{StaticResource HeaderTextBlockStyle}" />
+                    <chart:CartesianChart Name="chart3" Height="200" />
+                </StackPanel>
 
             </ui:SimpleStackPanel>
         </ScrollViewer>
