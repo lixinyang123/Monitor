@@ -1,4 +1,5 @@
 # Monitor
-A example for radar monitor app interface.
+
+Example for radar monitor app interface.
 
 ![](./Screenshot.png)
