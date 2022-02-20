@@ -2,4 +2,4 @@
 
 Example for radar monitor app interface.
 
-![](./Screenshot.png)
+![Screenshot](./Screenshot.png)
