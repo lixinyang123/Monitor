@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="HelixToolkit.Core.Wpf" Version="2.24.0" />
-    <PackageReference Include="LiveCharts.Wpf.NetCore3" Version="0.9.7" />
+    <PackageReference Include="LiveCharts.Wpf.NetCore3" Version="0.9.8" />
     <PackageReference Include="ModernWpfUI" Version="0.9.6" />
   </ItemGroup>
 
